@@ -1,7 +1,14 @@
 const gulp = require('gulp');
-// Gulpの依存関係をここに記述
+const babel = require('gulp-babel');
 
 gulp.task('default', function (done) {
-  // Gulpのタスクをここに記述
+  // Nodeのソース
+  gulp.src("es6/**/*.js")
+    .pipe(babel())
+    .pipe(gulp.dest("dist"));
+  // ブラウザのソース
+  gulp.src("public/es6/**/*.js")
+    .pipe(babel())
+    .pipe(gulp.dest("public/dist"));
   done();
 });
