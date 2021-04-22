@@ -11,5 +11,7 @@
   "dependencies": {
     "underscore": "^1.13.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
