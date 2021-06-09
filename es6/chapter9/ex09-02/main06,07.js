@@ -36,3 +36,13 @@ c.addPassenger('ミドリ');
 console.log(c.passengers);
 // v.deployAirbags(); エラー
 c.deployAirbags();
+
+class Motorcycle extends Vehicle {}
+
+const c2 = new Car();
+const m = new Motorcycle();
+console.log(c instanceof Car);
+console.log(c instanceof Vehicle);
+console.log(m instanceof Car);
+console.log(m instanceof Motorcycle);
+console.log(m instanceof Vehicle);
