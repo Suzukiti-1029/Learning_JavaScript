@@ -10,7 +10,7 @@ class Log {
   }
 
   [Symbol.iterator]() {
-    return this.messages.values();
+    return this.messages[Symbol.iterator]();
   }
 }
 
@@ -27,4 +27,3 @@ setTimeout(() => {
     console.log(`${entry.message} (${date})`);
   }
 }, 10 * 1000);
-

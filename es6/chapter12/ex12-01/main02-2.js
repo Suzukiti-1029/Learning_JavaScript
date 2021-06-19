@@ -10,7 +10,13 @@ class Log {
   }
 
   [Symbol.iterator]() {
-    return this.messages.values();
+    let i = 0;
+    const messages = this.messages;
+    return {
+      next: () => i >= messages.length
+        ? { value: undefined, done: true }
+        : { value: messages[i++], done: false },
+    };
   }
 }
 
@@ -27,4 +33,3 @@ setTimeout(() => {
     console.log(`${entry.message} (${date})`);
   }
 }, 10 * 1000);
-
