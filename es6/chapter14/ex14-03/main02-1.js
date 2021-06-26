@@ -9,11 +9,4 @@ function countdown(seconds) {
   });
 }
 
-countdown(5).then(
-  () => {
-    console.log('カウントダウン成功');
-  },
-  (err) => {
-    console.log(`カウントダウンでエラーが起こった: ${err.message}`);
-  },
-);
+countdown(5);
